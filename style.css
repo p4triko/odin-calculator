@@ -78,3 +78,7 @@ body {
 .clear-button {
   width: 90px;
 }
+
+.delete-button {
+  width: 200px;
+}
