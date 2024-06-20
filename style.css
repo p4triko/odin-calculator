@@ -1,20 +1,20 @@
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-body{
+body {
   background-color: rgb(56, 56, 56);
 }
 
-.calculator-container{
+.calculator-container {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.calculator{
+.calculator {
   width: 500px;
   display: flex;
   flex-direction: column;
@@ -22,10 +22,10 @@ body{
   margin-top: 100px;
   border-radius: 50px;
   background-color: rgb(39, 39, 39);
-  box-shadow: 0 0 10px rgba(255, 255, 255, 0.30);
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
 }
 
-.display-section{
+.display-section {
   height: 170px;
   width: 500px;
   display: flex;
@@ -33,13 +33,13 @@ body{
   align-items: center;
 }
 
-.display{
+.display {
   margin-right: 60px;
   color: white;
   font-size: 60px;
 }
 
-.input-section{
+.input-section {
   width: 500px;
   padding: 30px;
   gap: 15px;
@@ -49,7 +49,7 @@ body{
   flex-wrap: wrap;
 }
 
-.input-button{
+.input-button {
   height: 90px;
   width: 90px;
   font-size: 30px;
@@ -62,14 +62,14 @@ body{
   transition: box-shadow 0.15s;
 }
 
-.input-button:hover{
-  box-shadow: 0 0 10px rgba(255, 255, 255, 0.30);
+.input-button:hover {
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
 }
 
-.equal-button{
+.equal-button {
   background-color: rgb(179, 109, 23);
 }
 
-.clear-button{
-  width: 200px;
+.clear-button {
+  width: 90px;
 }
