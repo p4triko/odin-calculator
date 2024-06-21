@@ -44,6 +44,11 @@ body {
   font-size: 60px;
 }
 
+.previous-operation {
+  font-size: 30px;
+  color: rgb(155, 155, 155);
+}
+
 .input-section {
   width: 500px;
   padding: 30px;
