@@ -42,6 +42,10 @@ body {
   margin-right: 60px;
   color: white;
   font-size: 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-end;
 }
 
 .previous-operation {
