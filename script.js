@@ -27,6 +27,27 @@ operatorButton.forEach((button) => {
   });
 });
 
+equalButton.addEventListener("click", () => {
+  if (currentValue != "" && previousValue != "") {
+    operate();
+    let value = operate();
+    round(value);
+    value = value.toString();
+    previousOperation.textContent = "";
+    if (value.length <= 10) {
+      currentOperation.textContent = value;
+    } else {
+      currentOperation.textContent = value.slice(0, 5) + "...";
+    }
+    currentValue = value;
+    console.log(value);
+  }
+});
+
+decimalButton.addEventListener("click", () => {
+  addDecimal();
+});
+
 function appendNumber(number) {
   if (currentValue.length <= 10) {
     currentValue += number;
@@ -39,12 +60,11 @@ function appendOperator(operation) {
   currentValue = "";
 }
 
-function compute() {}
-
-function updateDisplay() {}
-
-function deleteOperation() {}
-
+function addDecimal() {
+  if (!currentValue.includes(".")) {
+    currentValue += ".";
+  }
+}
 clearButton.addEventListener("click", clear);
 
 function clear() {
@@ -72,18 +92,25 @@ function divide(a, b) {
   return a / b;
 }
 
-function operate(first, second, operator) {
+function operate() {
+  previousValue = Number(previousValue);
+  currentValue = Number(currentValue);
+
   if (operator === "+") {
-    return add(first, second);
+    return add(previousValue, currentValue);
   } else if (operator === "-") {
-    return subtract(first, second);
+    return subtract(previousValue, currentValue);
   } else if (operator === "*") {
-    return multiply(first, second);
+    return multiply(previousValue, currentValue);
   } else if (operator === "/") {
-    return divide(first, second);
+    return divide(previousValue, currentValue);
   } else {
     return null;
   }
+}
+
+function round(number) {
+  return Math.round(number * 1000) / 1000;
 }
 
 // numberButton.forEach((button) => {
